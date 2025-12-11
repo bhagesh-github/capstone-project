@@ -11,7 +11,7 @@ pipeline {
         stage('Deploy to AWS') {
             steps {
                 sh '''
-                ansible-playbook -i inventory.ini playbook-aws.yaml
+                ansible-playbook -i inventory playbook-aws.yaml
                 '''
             }
         }
@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy to Azure') {
             steps {
                 sh '''
-                ansible-playbook -i inventory.ini playbook-azure.yaml
+                ansible-playbook -i inventory playbook-azure.yaml
                 '''
             }
         }
