@@ -3,7 +3,7 @@
   tasks:
     - name: Copy Azure index.html
       copy:
-        src: files/index-azure.html
+        src: index-azure.html
         dest: /var/www/html/index.html
     - name: Restart Nginx
       service:
