@@ -1,0 +1,11 @@
+- hosts: aws
+  become: yes
+  tasks:
+    - name: Copy AWS index.html
+      copy:
+        src: files/index-aws.html
+        dest: /var/www/html/index.html
+    - name: Restart Nginx
+      service:
+        name: nginx
+        state: restarted
